@@ -1,0 +1,12 @@
+# Configuración local del editor / asistente
+.claude/
+.vscode/
+.idea/
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Netlify CLI (si se usa localmente)
+.netlify/

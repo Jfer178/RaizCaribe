@@ -1,0 +1,72 @@
+/* =========================================================================
+   RaízCaribe · Portal del comprador B2B
+   ========================================================================= */
+.cmp-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 22px; align-items: start; }
+.cmp-search .control { height: 52px; border-radius: 14px; }
+.cmp-search .btn { height: 52px; border-radius: 14px; }
+.cmp-filter { width: 260px; }
+.cmp-cart-list { max-height: 330px; overflow-y: auto; overflow-x: hidden; }
+.qty--sm button { width: 34px; height: 34px; }
+.qty--sm input { width: 86px; font-size: 14px; }
+.product .qty { box-shadow: 0 0 0 3px rgba(69, 165, 72, .12); }
+.cmp-layout .table th, .cmp-layout .table td { padding: 12px 10px; }
+.table td.num, .table td.t-right { white-space: nowrap; }
+.table .qty--sm input { width: 70px; }
+
+/* Tarjeta "Mi pedido" con stepper (parte inferior del mockup) */
+.cmp-track { display: flex; align-items: center; gap: 24px; margin-top: 22px; padding: 18px 26px; }
+.cmp-track__head { display: flex; align-items: center; gap: 14px; min-width: 230px; }
+.cmp-track .stepper { max-width: 620px; margin: 0 auto; }
+
+/* Inicio */
+.cmp-home { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+.cmp-alert { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; animation: fadeUp .5s var(--ease) both; }
+
+/* Detalle de producto */
+.cmp-detail { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 22px; }
+.cmp-detail__img { border-radius: 20px; background: radial-gradient(circle at 50% 60%, var(--g50), #fff 70%); border: 1px solid var(--n200); display: grid; place-items: center; padding: 16px; height: 240px; }
+.cmp-detail__img img { max-height: 200px; object-fit: contain; animation: pop .5s var(--spring) both; }
+.cmp-mini { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 14px; background: var(--n50); border: 1px solid var(--n200); }
+.cmp-mini b { font-size: 16px; color: var(--g900); }
+.cmp-totals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; padding: 14px; border-radius: 16px; background: var(--g50); border: 1px solid var(--g100); }
+.cmp-totals div { display: flex; flex-direction: column; gap: 2px; }
+.cmp-totals b { font-size: 16px; color: var(--g900); }
+
+/* Seguimiento */
+.cmp-track-layout { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 22px; align-items: start; }
+.cmp-orders .list-row__sub { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-orders .list-row .grow { min-width: 0; }
+.cmp-orders { position: sticky; top: calc(var(--hdr-h) + 24px); max-height: calc(100vh - var(--hdr-h) - 48px); overflow-y: auto; padding: 16px; }
+.cmp-orders .list-row { padding: 10px; }
+.list-row.is-sel { border-color: var(--g600); background: var(--g50); box-shadow: var(--sh-focus); }
+.cmp-order-head { display: flex; align-items: center; gap: 18px; }
+.cmp-order-head img { width: 92px; height: 78px; object-fit: contain; border-radius: 16px; background: var(--n50); border: 1px solid var(--n200); padding: 6px; }
+.cmp-order-meta { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.cmp-track-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.cmp-route-facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--n600); }
+.cmp-route-facts span { display: inline-flex; align-items: center; gap: 6px; }
+.cmp-route-facts .ico { color: var(--g700); }
+.cmp-reception { border: 1.5px solid var(--o500); background: linear-gradient(180deg, #FFF8EF, #fff 60%); animation: fadeUp .5s var(--ease) both; }
+.cmp-pay-preview { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 14px; background: var(--g50); border: 1px dashed var(--g300); }
+.cmp-pay-preview b { font-size: 22px; color: var(--g800); }
+.cmp-qr { display: flex; gap: 20px; align-items: flex-start; }
+.cmp-qr__code { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; border-radius: 16px; border: 1px solid var(--n200); background: #fff; }
+
+@media (max-width: 1280px) {
+  .cmp-layout { grid-template-columns: minmax(0, 1fr) 290px; }
+  .cmp-track-layout { grid-template-columns: 240px minmax(0, 1fr); }
+}
+@media (max-width: 1100px) {
+  .cmp-layout, .cmp-track-layout, .cmp-track-grid, .cmp-home { grid-template-columns: 1fr; }
+  .summary, .cmp-orders { position: static; max-height: none; }
+  .cmp-track { flex-wrap: wrap; }
+  .cmp-track .vr { display: none; }
+  .cmp-detail { grid-template-columns: 1fr; }
+  .cmp-totals { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .cmp-order-head { flex-wrap: wrap; }
+  .cmp-order-meta { align-items: flex-start; text-align: left; }
+  .cmp-qr { flex-direction: column; align-items: stretch; }
+  .cmp-alert { flex-direction: column; align-items: flex-start; }
+}

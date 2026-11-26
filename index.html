@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RaízCaribe · Del campo Caribe a más mesas</title>
+  <meta name="description" content="RaízCaribe: plataforma agro-logística que conecta productores del Caribe colombiano con compradores formales mediante rutas compartidas, trazabilidad y precios justos.">
+  <meta name="theme-color" content="#237A35">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/comprador.css">
+  <link rel="stylesheet" href="css/movil.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <noscript>RaízCaribe necesita JavaScript para funcionar.</noscript>
+
+  <!-- Núcleo: datos (modelo MER), servicios (API REST simulada + bus de eventos) -->
+  <script src="js/core/db.js"></script>
+  <script src="js/core/api.js"></script>
+  <!-- Interfaz -->
+  <script src="js/ui/icons.js"></script>
+  <script src="js/ui/ui.js"></script>
+  <!-- Vistas por rol -->
+  <script src="js/views/auth.js"></script>
+  <script src="js/views/comprador.js"></script>
+  <script src="js/views/productor.js"></script>
+  <script src="js/views/conductor.js"></script>
+  <script src="js/views/admin.js"></script>
+  <!-- Enrutador y shells -->
+  <script src="js/app.js"></script>
+</body>
+</html>
